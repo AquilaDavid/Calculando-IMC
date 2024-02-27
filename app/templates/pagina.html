@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
 {% block nav %}
-<img src="{{ url_for('static', filename = 'tabela-imc.png')}}" alt="tabela do imc">
+<h1>Calculando o IMC</h1>
+<p>
+    Informe suas informações nos seguintes campos a baixo:
+</p>
+<div class="algoritmos-do-calculo">
+    <label for="">Sua Altura: 
+        <input type="number" name="altura" id="altura-calculo" placeholder="Ex: 160"> 
+    </label>
+    <label for="">Seu Peso: 
+        <input type="number" name="peso" id="peso" placeholder="Ex: 80"> 
+    </label>
+</div>
+<div class="tabela-imc">
+    <img src="{{ url_for('static', filename = 'tabela-imc.png')}}" alt="tabela do imc">
+</div>
+
 {% endblock %}
